@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 
 class Account {
 public:
@@ -17,9 +18,10 @@ public:
     }
 
     void withdraw(int withdrawAmount){
-        if(withdrawAmount > 0) {
+        if(withdrawAmount <= balance ) {
             balance = balance - withdrawAmount;
         }
+
     }
 
     int getBalance() const {
